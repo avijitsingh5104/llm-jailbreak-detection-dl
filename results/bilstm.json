@@ -1,0 +1,321 @@
+{
+  "model": "bilstm",
+  "mode": "multiclass",
+  "params": 3220741,
+  "train_time_min": 2.008840772483332,
+  "epochs_run": 8,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.5092664724084693,
+      "val_accuracy": 0.9160016799664007,
+      "val_precision": 0.707611071161519,
+      "val_recall": 0.8558700338293874,
+      "val_f1": 0.7597130624283527
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.2877010434338572,
+      "val_accuracy": 0.9416211675766485,
+      "val_precision": 0.718108515637405,
+      "val_recall": 0.8361559082486459,
+      "val_f1": 0.7665506737850416
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.23394896317194003,
+      "val_accuracy": 0.9447711045779085,
+      "val_precision": 0.7732524455571631,
+      "val_recall": 0.853754611226407,
+      "val_f1": 0.8071309398464108
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.19209050029245803,
+      "val_accuracy": 0.9603107937841243,
+      "val_precision": 0.8111369698677725,
+      "val_recall": 0.8412799169515974,
+      "val_f1": 0.8256050399211667
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.15885935262055464,
+      "val_accuracy": 0.9682906341873162,
+      "val_precision": 0.853528114423965,
+      "val_recall": 0.8221595413749727,
+      "val_f1": 0.8334555813658049
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.14382474338612258,
+      "val_accuracy": 0.9483410331793364,
+      "val_precision": 0.7906962043445512,
+      "val_recall": 0.8717231475683499,
+      "val_f1": 0.8214139908521763
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.1205146245514781,
+      "val_accuracy": 0.9370012599748005,
+      "val_precision": 0.7761232830367665,
+      "val_recall": 0.89051376936306,
+      "val_f1": 0.8135338299679649
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.09819600694708905,
+      "val_accuracy": 0.9573708525829483,
+      "val_precision": 0.8166851659653526,
+      "val_recall": 0.8519901854081315,
+      "val_f1": 0.8317508919555641
+    }
+  ],
+  "config": {
+    "max_len": 200,
+    "vocab": 20000,
+    "pooling": "attn",
+    "hidden": 128,
+    "layers": 2,
+    "binary": false,
+    "epochs": 15,
+    "batch_size": 64,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "patience": 3,
+    "no_class_weights": false,
+    "amp": false,
+    "limit": null,
+    "seed": 42,
+    "vocab_size": 20000,
+    "embed_dim": 128,
+    "dropout": 0.4,
+    "clip": 1.0,
+    "rebuild_vocab": false
+  },
+  "val": {
+    "accuracy": 0.9682906341873162,
+    "precision": 0.853528114423965,
+    "recall": 0.8221595413749727,
+    "f1": 0.8334555813658049,
+    "attack_detection_rate": 0.8438003220611916,
+    "false_positive_rate": 0.010383965225790872,
+    "n": 4762,
+    "ms_per_prompt": 0.07579496892061288,
+    "confusion_matrix": [
+      [
+        4098,
+        36,
+        2,
+        5
+      ],
+      [
+        84,
+        47,
+        2,
+        1
+      ],
+      [
+        13,
+        8,
+        385,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        81
+      ]
+    ],
+    "per_class": {
+      "benign": {
+        "precision": 0.9768772348033373,
+        "recall": 0.9896160347742091,
+        "f1-score": 0.9832053742802304,
+        "support": 4141.0
+      },
+      "jailbreak": {
+        "precision": 0.5164835164835165,
+        "recall": 0.35074626865671643,
+        "f1-score": 0.4177777777777778,
+        "support": 134.0
+      },
+      "prompt_injection": {
+        "precision": 0.9897172236503856,
+        "recall": 0.9482758620689655,
+        "f1-score": 0.9685534591194969,
+        "support": 406.0
+      },
+      "obfuscation": {
+        "precision": 0.9310344827586207,
+        "recall": 1.0,
+        "f1-score": 0.9642857142857143,
+        "support": 81.0
+      },
+      "accuracy": 0.9682906341873162,
+      "macro avg": {
+        "precision": 0.853528114423965,
+        "recall": 0.8221595413749727,
+        "f1-score": 0.8334555813658049,
+        "support": 4762.0
+      },
+      "weighted avg": {
+        "precision": 0.96423696061212,
+        "recall": 0.9682906341873162,
+        "f1-score": 0.9657235456481131,
+        "support": 4762.0
+      }
+    }
+  },
+  "test": {
+    "accuracy": 0.9274393736872255,
+    "precision": 0.7519454253842506,
+    "recall": 0.8179130585422889,
+    "f1": 0.7761166487032852,
+    "attack_detection_rate": 0.8164983164983165,
+    "false_positive_rate": 0.057721300883049755,
+    "n": 5237,
+    "ms_per_prompt": 0.07998752339125036,
+    "confusion_matrix": [
+      [
+        4375,
+        250,
+        6,
+        12
+      ],
+      [
+        99,
+        57,
+        0,
+        0
+      ],
+      [
+        10,
+        3,
+        348,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        77
+      ]
+    ],
+    "per_class": {
+      "benign": {
+        "precision": 0.9756913470115968,
+        "recall": 0.9422786991169503,
+        "f1-score": 0.9586939848800263,
+        "support": 4643.0
+      },
+      "jailbreak": {
+        "precision": 0.18387096774193548,
+        "recall": 0.36538461538461536,
+        "f1-score": 0.2446351931330472,
+        "support": 156.0
+      },
+      "prompt_injection": {
+        "precision": 0.9830508474576272,
+        "recall": 0.96398891966759,
+        "f1-score": 0.9734265734265735,
+        "support": 361.0
+      },
+      "obfuscation": {
+        "precision": 0.8651685393258427,
+        "recall": 1.0,
+        "f1-score": 0.927710843373494,
+        "support": 77.0
+      },
+      "accuracy": 0.9274393736872255,
+      "macro avg": {
+        "precision": 0.7519454253842506,
+        "recall": 0.8179130585422889,
+        "f1-score": 0.7761166487032852,
+        "support": 5237.0
+      },
+      "weighted avg": {
+        "precision": 0.9509868490744471,
+        "recall": 0.9274393736872255,
+        "f1-score": 0.9379835764509203,
+        "support": 5237.0
+      }
+    }
+  },
+  "novel": {
+    "accuracy": 0.5928411633109619,
+    "precision": 0.7227827867234295,
+    "recall": 0.6966666666666667,
+    "f1": 0.603643949518676,
+    "attack_detection_rate": 0.5925,
+    "false_positive_rate": 0.0,
+    "n": 447,
+    "ms_per_prompt": 0.05660669574972498,
+    "confusion_matrix": [
+      [
+        47,
+        0,
+        0,
+        0
+      ],
+      [
+        54,
+        82,
+        13,
+        1
+      ],
+      [
+        109,
+        5,
+        36,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        100
+      ]
+    ],
+    "per_class": {
+      "benign": {
+        "precision": 0.22380952380952382,
+        "recall": 1.0,
+        "f1-score": 0.3657587548638132,
+        "support": 47.0
+      },
+      "jailbreak": {
+        "precision": 0.9425287356321839,
+        "recall": 0.5466666666666666,
+        "f1-score": 0.6919831223628692,
+        "support": 150.0
+      },
+      "prompt_injection": {
+        "precision": 0.7346938775510204,
+        "recall": 0.24,
+        "f1-score": 0.36180904522613067,
+        "support": 150.0
+      },
+      "obfuscation": {
+        "precision": 0.9900990099009901,
+        "recall": 1.0,
+        "f1-score": 0.9950248756218906,
+        "support": 100.0
+      },
+      "accuracy": 0.5928411633109619,
+      "macro avg": {
+        "precision": 0.7227827867234295,
+        "recall": 0.6966666666666667,
+        "f1-score": 0.603643949518676,
+        "support": 447.0
+      },
+      "weighted avg": {
+        "precision": 0.8078575852049827,
+        "recall": 0.5928411633109619,
+        "f1-score": 0.6146800317206673,
+        "support": 447.0
+      }
+    }
+  },
+  "generalization_gap_f1": 0.17247269918460928
+}
