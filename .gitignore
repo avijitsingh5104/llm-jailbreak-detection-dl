@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Data and model artefacts (large / re-creatable)
+data/raw/*
+data/processed/*
+checkpoints/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!checkpoints/.gitkeep
+*.pt
+*.joblib
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
