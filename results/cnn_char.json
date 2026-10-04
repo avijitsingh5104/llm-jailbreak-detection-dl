@@ -1,0 +1,365 @@
+{
+  "model": "cnn_char",
+  "mode": "multiclass",
+  "params": 686804,
+  "train_time_min": 2.1252918870666653,
+  "epochs_run": 13,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.72656708139941,
+      "val_accuracy": 0.9542209155816883,
+      "val_precision": 0.8037500952432612,
+      "val_recall": 0.833670020960467,
+      "val_f1": 0.8158011009310978
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.5005129782967982,
+      "val_accuracy": 0.9384712305753885,
+      "val_precision": 0.7719815358480687,
+      "val_recall": 0.8350304002871425,
+      "val_f1": 0.7993405430302596
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.42215102419671535,
+      "val_accuracy": 0.9277614447711046,
+      "val_precision": 0.7906793704585224,
+      "val_recall": 0.8953568547357227,
+      "val_f1": 0.8157536164500497
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.3509726072367282,
+      "val_accuracy": 0.9542209155816883,
+      "val_precision": 0.8292806766432137,
+      "val_recall": 0.8674142170960234,
+      "val_f1": 0.84130910330102
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.33678540676218716,
+      "val_accuracy": 0.9561108777824443,
+      "val_precision": 0.8017921571823734,
+      "val_recall": 0.8714279313560283,
+      "val_f1": 0.8318775978744075
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.313878090518741,
+      "val_accuracy": 0.9647207055858883,
+      "val_precision": 0.8371475226460632,
+      "val_recall": 0.8508505489913745,
+      "val_f1": 0.8423921614923817
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.32502522472454975,
+      "val_accuracy": 0.9485510289794205,
+      "val_precision": 0.8201158501576582,
+      "val_recall": 0.9020281883686799,
+      "val_f1": 0.8435679008290778
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.29602434452954085,
+      "val_accuracy": 0.9626207475850483,
+      "val_precision": 0.840365480775018,
+      "val_recall": 0.8623285366835518,
+      "val_f1": 0.8508173973855945
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.2889742864399769,
+      "val_accuracy": 0.9680806383872322,
+      "val_precision": 0.8712850054942753,
+      "val_recall": 0.8252923946367354,
+      "val_f1": 0.8408750530479068
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.2625884389906379,
+      "val_accuracy": 0.9651406971860563,
+      "val_precision": 0.8507573303577384,
+      "val_recall": 0.8734685310065256,
+      "val_f1": 0.8610217658394843
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.2373768130835965,
+      "val_accuracy": 0.9313313733725326,
+      "val_precision": 0.7983689523083299,
+      "val_recall": 0.8969385685360827,
+      "val_f1": 0.8219207762248485
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.2461371095067394,
+      "val_accuracy": 0.9580008399832003,
+      "val_precision": 0.8242752125301964,
+      "val_recall": 0.8591950553339607,
+      "val_f1": 0.8406575048976768
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.2637795081672233,
+      "val_accuracy": 0.9523309533809324,
+      "val_precision": 0.8242585197978941,
+      "val_recall": 0.8847836353283184,
+      "val_f1": 0.8441551928886265
+    }
+  ],
+  "config": {
+    "level": "char",
+    "max_len": 512,
+    "vocab": 3950,
+    "binary": false,
+    "epochs": 15,
+    "batch_size": 64,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "patience": 3,
+    "no_class_weights": false,
+    "amp": false,
+    "limit": null,
+    "seed": 42,
+    "vocab_size": null,
+    "embed_dim": 128,
+    "kernel_sizes": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "filters": 100,
+    "dropout": 0.5,
+    "rebuild_vocab": false
+  },
+  "val": {
+    "accuracy": 0.9651406971860563,
+    "precision": 0.8507573303577384,
+    "recall": 0.8734685310065256,
+    "f1": 0.8610217658394843,
+    "attack_detection_rate": 0.895330112721417,
+    "false_positive_rate": 0.021492393141753198,
+    "n": 4762,
+    "ms_per_prompt": 0.1350431209575755,
+    "confusion_matrix": [
+      [
+        4052,
+        77,
+        11,
+        1
+      ],
+      [
+        56,
+        75,
+        3,
+        0
+      ],
+      [
+        9,
+        9,
+        388,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        81
+      ]
+    ],
+    "per_class": {
+      "benign": {
+        "precision": 0.9842118047121691,
+        "recall": 0.9785076068582468,
+        "f1-score": 0.9813514168079438,
+        "support": 4141.0
+      },
+      "jailbreak": {
+        "precision": 0.4658385093167702,
+        "recall": 0.5597014925373134,
+        "f1-score": 0.5084745762711864,
+        "support": 134.0
+      },
+      "prompt_injection": {
+        "precision": 0.9651741293532339,
+        "recall": 0.9556650246305419,
+        "f1-score": 0.9603960396039604,
+        "support": 406.0
+      },
+      "obfuscation": {
+        "precision": 0.9878048780487805,
+        "recall": 1.0,
+        "f1-score": 0.9938650306748467,
+        "support": 81.0
+      },
+      "accuracy": 0.9651406971860563,
+      "macro avg": {
+        "precision": 0.8507573303577384,
+        "recall": 0.8734685310065256,
+        "f1-score": 0.8610217658394843,
+        "support": 4762.0
+      },
+      "weighted avg": {
+        "precision": 0.9680630691308073,
+        "recall": 0.9651406971860563,
+        "f1-score": 0.9664711612318155,
+        "support": 4762.0
+      }
+    }
+  },
+  "test": {
+    "accuracy": 0.9115906053083827,
+    "precision": 0.7705747345636684,
+    "recall": 0.8531679409290645,
+    "f1": 0.7909385141812146,
+    "attack_detection_rate": 0.8653198653198653,
+    "false_positive_rate": 0.0816282575920741,
+    "n": 5237,
+    "ms_per_prompt": 0.13535587702883245,
+    "confusion_matrix": [
+      [
+        4264,
+        365,
+        11,
+        3
+      ],
+      [
+        74,
+        81,
+        0,
+        1
+      ],
+      [
+        6,
+        3,
+        352,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        77
+      ]
+    ],
+    "per_class": {
+      "benign": {
+        "precision": 0.9815837937384899,
+        "recall": 0.918371742407926,
+        "f1-score": 0.948926226772004,
+        "support": 4643.0
+      },
+      "jailbreak": {
+        "precision": 0.18040089086859687,
+        "recall": 0.5192307692307693,
+        "f1-score": 0.26776859504132233,
+        "support": 156.0
+      },
+      "prompt_injection": {
+        "precision": 0.9696969696969697,
+        "recall": 0.9750692520775623,
+        "f1-score": 0.9723756906077348,
+        "support": 361.0
+      },
+      "obfuscation": {
+        "precision": 0.9506172839506173,
+        "recall": 1.0,
+        "f1-score": 0.9746835443037974,
+        "support": 77.0
+      },
+      "accuracy": 0.9115906053083827,
+      "macro avg": {
+        "precision": 0.7705747345636684,
+        "recall": 0.8531679409290645,
+        "f1-score": 0.7909385141812146,
+        "support": 5237.0
+      },
+      "weighted avg": {
+        "precision": 0.9564434275784063,
+        "recall": 0.9115906053083827,
+        "f1-score": 0.9306310156482043,
+        "support": 5237.0
+      }
+    }
+  },
+  "novel": {
+    "accuracy": 0.4004474272930649,
+    "precision": 0.6964632004886242,
+    "recall": 0.5012234042553192,
+    "f1": 0.44134163826563705,
+    "attack_detection_rate": 0.37,
+    "false_positive_rate": 0.0851063829787234,
+    "n": 447,
+    "ms_per_prompt": 0.10882728859072105,
+    "confusion_matrix": [
+      [
+        43,
+        0,
+        4,
+        0
+      ],
+      [
+        119,
+        28,
+        3,
+        0
+      ],
+      [
+        97,
+        0,
+        53,
+        0
+      ],
+      [
+        36,
+        9,
+        0,
+        55
+      ]
+    ],
+    "per_class": {
+      "benign": {
+        "precision": 0.14576271186440679,
+        "recall": 0.9148936170212766,
+        "f1-score": 0.25146198830409355,
+        "support": 47.0
+      },
+      "jailbreak": {
+        "precision": 0.7567567567567568,
+        "recall": 0.18666666666666668,
+        "f1-score": 0.2994652406417112,
+        "support": 150.0
+      },
+      "prompt_injection": {
+        "precision": 0.8833333333333333,
+        "recall": 0.35333333333333333,
+        "f1-score": 0.5047619047619047,
+        "support": 150.0
+      },
+      "obfuscation": {
+        "precision": 1.0,
+        "recall": 0.55,
+        "f1-score": 0.7096774193548387,
+        "support": 100.0
+      },
+      "accuracy": 0.4004474272930649,
+      "macro avg": {
+        "precision": 0.6964632004886242,
+        "recall": 0.5012234042553192,
+        "f1-score": 0.44134163826563705,
+        "support": 447.0
+      },
+      "weighted avg": {
+        "precision": 0.7894057292419253,
+        "recall": 0.4004474272930649,
+        "f1-score": 0.4550794791863952,
+        "support": 447.0
+      }
+    }
+  },
+  "generalization_gap_f1": 0.3495968759155776
+}
